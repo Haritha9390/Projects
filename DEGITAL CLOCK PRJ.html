@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        #d{
+            margin-top: 150px;
+            width: 400px;
+            height: 300px;
+            border: 1px solid black;
+            border-radius: 100%;
+            box-shadow: 1px 5px 5px black;
+          
+        }
+        .h{
+            position: relative;
+            top: 30px;
+        }
+        #day{
+            color:rgb(16, 217, 243);
+            font-size: xx-large;
+
+        }
+        #date{
+            color: hotpink;
+            font-size: xx-large;
+        }
+        #time{
+            color: black;
+            font-size: xx-large;
+        }
+        #b{
+            background-image:url();
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    </style>
+</head>
+<body onload="clock()" id="b">
+    <center>
+      <div id="d">
+         <h1 class="h" id="day"></h1>
+         <h3 class="h" id="date"></h3>
+         <h3 class="h" id="time"></h3>
+      </div>
+       <script>
+        function clock()
+       {
+          var dy=new Date()
+          var roju=dy.getDay()
+          switch(roju)
+          {
+            case 0:roju="SUNDAY";
+                   document.getElementById('d').style.backgroundImage="url(./JESUS.jpg)";
+                   document.getElementById('d').style.backgroundSize="400px 350px";
+                   document.getElementById('b').style.backgroundImage="url(./images.jpg)";
+                  document.getElementById('b').style.backgroundSize="100% 650px";
+            break;
+            case 1:roju="MONDAY";
+                  document.getElementById('d').style.backgroundImage="url()";
+                  document.getElementById('d').style.backgroundSize="400px 350px";
+                  document.getElementById('b').style.backgroundImage="url(./istock.jpg)";
+                  document.getElementById('b').style.backgroundSize="100% 650px";
+            break;
+            case 2:roju="TUESDAY";
+                document.getElementById('d').style.backgroundImage="url(./istock.jpg)";
+                document.getElementById('d').style.backgroundSize="400px 295px"
+                document.getElementById('b').style.backgroundImage="url(./images.jpg)";
+                document.getElementById('b').style.backgroundSize="100% 650px";
+            break;
+            case 3:roju="WEDESDAY";
+                  document.getElementById('d').style.backgroundImage="url(./rabbit.gif)";
+                  document.getElementById('d').style.backgroundSize="400px 350px";
+                  document.getElementById('b').style.backgroundImage="url(./images.jpg)";
+                document.getElementById('b').style.backgroundSize="100% 650px";
+            break;
+            case 4:roju="THURSDAY";
+                 document.getElementById('d').style.backgroundImage="url(./JESUS.jpg)";
+                document.getElementById('d').style.backgroundSize="400px 350px";
+                document.getElementById('b').style.backgroundImage="url(./istock.jpg)";
+                document.getElementById('b').style.backgroundSize="100% 650px";
+
+            break;
+            case 5:roju="FRIDAY";
+                document.getElementById('d').style.backgroundImage="url(./JESUS.jpg)";
+                document.getElementById('d').style.backgroundSize="400px 350px";
+                document.getElementById('b').style.backgroundImage="url(./images.jpg)";
+                document.getElementById('b').style.backgroundSize="100% 650px";
+            break;
+            case 6:roju="SATURDAY";
+                document.getElementById('d').style.backgroundImage="url(./FELLOWS.jpg)";
+                document.getElementById('d').style.backgroundSize="400px 350px";
+                document.getElementById('b').style.backgroundImage="url(./images.jpg)";
+                document.getElementById('b').style.backgroundSize="100% 650px";
+            break; 
+          }
+             document.getElementById('day').innerHTML=roju;
+       
+          var dd=dy.getDate()
+          var mon=dy.getMonth()
+          var yyyy=dy.getFullYear()
+        
+         switch(mon)
+         {
+            case 0:mon="JAN";
+            break;
+            case 1:mon="FEB";
+            break;
+            case 2:mon="MAR";
+            break;
+            case 3:mon="APR";
+            break;
+            case 4:mon="MAY";
+            break;
+            case 5:mon="JUN";
+            break;
+            case 6:mon="JUL";
+            break;
+            case 7:mon="AUG";
+            break;
+            case 8:mon="SEP";
+            break;
+            case 9:mon="OCT";
+            break;
+            case 10:mon="NOV";
+            break;
+            case 11:mon="DEC";
+            break;
+         }
+         if(dd>0 && dd<10)
+         {
+             dd="0" + dd
+         }
+          else
+         {
+            dd=dd
+         }
+         document.getElementById('date').innerHTML=dd + " / " + mon + " / " + yyyy
+
+         var hh=dy.getHours()
+         var mm=dy.getMinutes()
+         var sec=dy.getSeconds()
+         var ampm=""
+         if(hh>=12)
+         {
+            ampm="PM"
+         }
+         else
+         {
+            ampm="AM"
+         }
+         if(hh>0 && hh<10)
+         {
+            hh="0" + hh
+         }
+         else
+         {
+            hh-=12
+         }
+         document.getElementById('time').innerHTML=hh + " : " +  mm  + " : "  + sec  + "   " + ampm
+         setTimeout(function(){clock(), 1000})
+  }
+ </script>
+</center>
+</body>
+</html>
