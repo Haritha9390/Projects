@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+       .c:hover{
+             background-color: aqua;
+       }
+       .c:active{
+        background-color: hotpink;
+       }
+    </style>
+</head>
+<body>
+    <center>
+        <br>
+        <br>
+        <form id="calsi">
+        <fieldset style="width: 280px; height: 550px;border: 1px solid black; border-radius: 20px;background-image: url(./lights.webp);">
+       <legend style="color: white; font-size: xx-large; text-shadow: 2px 2px 0px  red,-2px -2px  0px blue;"><b><i>Calculator</i></b></legend>
+       
+        <input id="display" type="button" style="width: 280px; height: 150px;color: white; font-size: x-large; border:2px solid white;border-radius: 10px; margin-top: 10px; background-image: url(./lights...jpg); text-align: right;">
+        <br>
+        <br>
+        <input class="c" type="button" value="AC" style="border-radius: 30%; width: 45px; height: 33px; font-size: x-large;" onclick="calsi.display.value=''"> &nbsp; &nbsp; &nbsp;
+       <input class="c" type="button" value="C" style="border-radius: 30%; width: 45px; height: 33px; font-size: x-large;" onclick="calsi.display.value=calsi.display.value.substr(0,calsi.display.value.length-1)">&nbsp; &nbsp; &nbsp;
+       <input class="c"  type="button" value="%" style="border-radius: 30%;width: 45px; height: 33px; font-size: x-large;" onclick="calsi.display.value+='%'"> &nbsp; &nbsp; &nbsp;
+       <input class="c" type="button" value="/" style="border-radius: 30%; width: 45px; height: 33px;  font-size: x-large;" onclick="calsi.display.value+='/'"> &nbsp; &nbsp; &nbsp;
+       <br>
+      <br>
+       <input class="c"  type="button" value="1" style="border-radius: 30%; width: 45px; height: 33px;  font-size: x-large;" onclick="calsi.display.value+='1'">&nbsp; &nbsp; &nbsp;
+        <input class="c" type="button" value="2" style="border-radius: 30%; width: 45px; height: 33px;  font-size: x-large;" onclick="calsi.display.value+='2'"> &nbsp; &nbsp; &nbsp; 
+        <input class="c" type="button" value="3" style="border-radius: 30%; width: 45px; height: 33px;  font-size: x-large;" onclick="calsi.display.value+='3'"> &nbsp; &nbsp; &nbsp;
+        <input class="c" type="button" value="*" style="border-radius: 30%; width: 45px; height: 33px;  font-size: x-large;" onclick="calsi.display.value+='*'"> &nbsp; &nbsp; &nbsp;
+        <br>
+        <br>
+        <input class="c" type="button" value="4" style="border-radius: 30%; width: 45px; height: 33px;  font-size: x-large;" onclick="calsi.display.value+='4'"> &nbsp; &nbsp; &nbsp;
+        <input class="c" type="button" value="5" style="border-radius: 30%; width: 45px; height: 33px;  font-size: x-large;" onclick="calsi.display.value+='5'"> &nbsp; &nbsp; &nbsp;
+        <input class="c" type="button" value="6" style="border-radius: 30%; width: 45px; height: 33px; font-size: x-large;" onclick="calsi.display.value+='6'"> &nbsp; &nbsp; &nbsp;
+        <input class="c" type="button" value="-" style="border-radius: 30%; width: 45px; height: 33px;  font-size: x-large;" onclick="calsi.display.value+='-'"> &nbsp; &nbsp; &nbsp;
+        <br>
+        <br>
+        <input class="c" type="button" value="7" style="border-radius: 30%; width: 45px; height: 33px;  font-size: x-large;"onclick="calsi.display.value+='7'"> &nbsp; &nbsp; &nbsp;
+        <input class="c" type="button" value="8" style="border-radius: 30%; width: 45px; height: 33px;  font-size: x-large;" onclick="calsi.display.value+='8'"> &nbsp; &nbsp; &nbsp;
+        <input class="c" type="button" value="9" style="border-radius: 30%; width: 45px; height: 33px;  font-size: x-large;" onclick="calsi.display.value+='9'"> &nbsp; &nbsp; &nbsp;
+        <input class="c" type="button" value="+" style="border-radius: 30%; width: 45px; height: 33px;  font-size: x-large;" onclick="calsi.display.value+='+'"> &nbsp; &nbsp; &nbsp;
+        <br>
+        <br>
+        <input class="c" type="button" value="00" style="border-radius: 30%; width: 45px; height: 33px;  font-size: x-large;" onclick="calsi.display.value+='00'"> &nbsp; &nbsp; &nbsp;
+        <input class="c" type="button" value="0" style="border-radius: 30%; width: 45px; height: 33px;  font-size: x-large;" onclick="calsi.display.value+='0'"> &nbsp; &nbsp; &nbsp;
+        <input class="c" type="button" value="." style="border-radius: 30%; width: 45px; height: 33px;  font-size: x-large;" onclick="calsi.display.value+='.'"> &nbsp; &nbsp; &nbsp;
+        <input class="c" type="button" value="=" style="border-radius: 30%; width: 45px; height: 33px;  font-size: x-large;" onclick="calsi.display.value=eval(calsi.display.value)"> &nbsp; &nbsp; &nbsp;
+    </fieldset>
+</form>
+</center>
+</body>
+</html>
